@@ -1,0 +1,23 @@
+mixin header()
+    +b.header(id="header")
+        .container
+            +e.inner
+                +e.A.logo(href="#")
+                    +e.IMG.logo-image(src=require('./../images/logo.png'), alt='')
+                +e.humburger(id="humburger")
+                    SPAN
+                    SPAN
+                +e.UL.menu(id="menu")
+                    +e.LI.item
+                        A(href="#") I stopnia
+                    +e.LI.item
+                        A(href="#") II stopnia
+                    +e.LI.item
+                        A(href="#") Podyplomowe
+                    +e.LI.item
+                        A(href="#") Szkolenia
+                    +e.LI.item
+                        A(href="#") Usługi
+
+
+

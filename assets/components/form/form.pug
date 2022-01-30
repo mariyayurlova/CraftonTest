@@ -1,0 +1,30 @@
+mixin form()
+    +b.form
+        .container
+            +e.inner
+                +e.SPAN.title Nie znalazłeś odpowiedniego kontaktu?
+                +e.SPAN.desc Skorzystaj z formularza.
+                +e.FORM.wrapper(id="formMain")
+                    +e.row.form__row-multi
+                        +e.item
+                            LABEL(for="name") Imię
+                            +e.INPUT.item-input(name="name" type="text" id="name")
+                        +e.item
+                            LABEL(for="surname") Nazwisko
+                            +e.INPUT.item-input(name="surname" type="text" id="surname")
+                    +e.row
+                        +e.item
+                            LABEL(for="email") Adres e-mail
+                            +e.INPUT.item-input(name="email" type="text" id="email")
+                    +e.row
+                        +e.item
+                            LABEL(for="message") Treść wiadomości
+                            +e.TEXTAREA.item-input(name="message" type="text" id="message")
+                    +e.apply
+                        +e.LABEL.apply-container Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia 1997 roku o ochronie danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w celach marketingowych przez Collegium Da Vinci i oświadczam, iż podanie przeze mnie danych osobowych jest dobrowolne oraz iż zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich zmiany oraz usunięcia.
+                            INPUT(type="checkbox" checked="checked")
+                            +e.SPAN.checkmark
+                    +e.BUTTON.submit(type="submit") wyślij
+
+
+

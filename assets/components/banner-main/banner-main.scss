@@ -1,0 +1,178 @@
+@import "./../../common/constants";
+
+.banner-main{
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__inner{
+    position: relative;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__slide{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.502);
+    z-index: 1;
+  }
+
+  .banner-main__container .swiper-button-next, .banner-main__container .swiper-button-prev {
+    background-image: url(./../../images/arrow.png);
+    width: 30px;
+    height: 21px;
+    background-size: 30px 21px;
+    transition: .3s all;
+    bottom: 112px;
+    top: unset;
+  }
+
+  .banner-main__container .swiper-button-next:hover, .banner-main__container .swiper-button-prev:hover{
+    background-image: url(./../../images/arrow_active.png);
+    transition: .3s all;
+  }
+
+  .banner-main__container .swiper-button-next{
+    left: 60px;
+    right: unset;
+  }
+
+  .banner-main__container .swiper-button-prev{
+    transform: rotate(-180deg);
+    left: 20px;
+  }
+
+  &__slide-content{
+    margin-bottom: 224px;
+    margin-top: auto;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__slide-title{
+    h1{
+      font-size: 40px;
+      font-weight: 200;
+      font-style: normal;
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      text-align: left;
+      margin: 0;
+    }
+    p{
+      font-size: 40px;
+      font-weight: 200;
+      font-style: normal;
+      color: rgb(255, 255, 255);
+      line-height: 1;
+      text-align: left;
+      margin : 14px 0 0;
+
+      span{
+        color: #00b6dc;
+      }
+    }
+  }
+
+  &__slide-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+
+    a{
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 11px 24px 0px rgba(0, 0, 0, 0.12);
+      padding: 10px 14px 10px 10px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-style: normal;
+      color: rgb(0, 40, 65);
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1;
+      border: 2px solid #f0f3f5;
+      transition: .3s all;
+
+      @include sm{
+        padding: 20px 48px 20px 30px;
+      }
+
+      &:hover{
+        background-color: rgb(0, 40, 65);
+        color: rgb(255, 255, 255);
+        transition: .3s all;
+        border: 2px solid rgb(0, 40, 65);
+      }
+    }
+
+    a:nth-child(2){
+      margin-left: 20px;
+      background-color: transparent;
+      color: #ffffff;
+      font-weight: 200;
+
+      &:hover{
+        background-color: rgb(0, 40, 65);
+        color: rgb(255, 255, 255);
+        transition: .3s all;
+        border: 2px solid rgb(0, 40, 65);
+      }
+    }
+  }
+
+  .banner-main__container .swiper-pagination{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12px;
+    right: 10px;
+    left: unset;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: unset;
+
+    @include lg{
+      right: 96px;
+    }
+  }
+
+
+  .banner-main__container .swiper-pagination-bullet{
+    background: rgb(255, 255, 255);
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .banner-main__container .swiper-pagination-bullet:last-child{
+    margin-bottom: 0;
+  }
+
+  .banner-main__container .swiper-pagination-bullet-active{
+    background: #ffcd19;
+    opacity: 1;
+  }
+
+
+}

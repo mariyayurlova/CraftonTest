@@ -1,0 +1,51 @@
+mixin banner-main()
+    +b.banner-main(style=`background-image:url(${require("./../images/slider.jpg")})` )
+        +e.inner
+            +e.back
+            +e.container.swiper-container
+                +e.wrapper.swiper-wrapper
+                    +e.slide.swiper-slide
+                        .container
+                            +e.slide-content
+                                +e.slide-title
+                                    H1 Będziesz się uczyć z ciekawością.
+                                    P
+                                        SPAN Obiecujemy.
+                                +e.slide-buttons
+                                    +e.A(href="#") zobacz więcej
+                                    +e.A(href="#") umów się z aniołem
+                    +e.slide.swiper-slide
+                        .container
+                            +e.slide-content
+                                +e.slide-title
+                                    H1 Będziesz się uczyć z ciekawością.
+                                        P
+                                            SPAN Obiecujemy.
+                                +e.slide-buttons
+                                    +e.A(href="#") zobacz więcej
+                                    +e.A(href="#") umów się z aniołem
+                    +e.slide.swiper-slide
+                        .container
+                            +e.slide-content
+                                +e.slide-title
+                                    H1 Będziesz się uczyć z ciekawością.
+                                        P
+                                            SPAN Obiecujemy.
+                                +e.slide-buttons
+                                    +e.A(href="#") zobacz więcej
+                                    +e.A(href="#") umów się z aniołem
+                    +e.slide.swiper-slide
+                        .container
+                            +e.slide-content
+                                +e.slide-title
+                                    H1 Będziesz się uczyć z ciekawością.
+                                        P
+                                            SPAN Obiecujemy.
+                                +e.slide-buttons
+                                    +e.A(href="#") zobacz więcej
+                                    +e.A(href="#") umów się z aniołem
+                +e.pagination.swiper-pagination
+                .container
+                    +e.button-prev.swiper-button-prev
+                    +e.button-next.swiper-button-next
+

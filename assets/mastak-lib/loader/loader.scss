@@ -1,0 +1,43 @@
+$BGC_LOADER: #fff;
+$C_SPINNER: #000;
+
+@mixin loader() {
+
+    .body_overflow_hidden {
+        overflow: hidden;
+    }
+
+    .loader {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background-color: $BGC_LOADER;
+
+        &__spinner {
+            margin: 100px auto 0;
+            width: 70px;
+            text-align: center;
+        }
+
+        &_active{
+            fill:#FDB813;
+        }
+
+        &_deactive{
+            fill:#004B96;
+            transition: .3s all;
+        }
+
+
+
+
+    }
+
+
+}

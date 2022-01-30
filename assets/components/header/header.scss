@@ -1,0 +1,146 @@
+@import "./../../common/constants";
+
+.header{
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &_active{
+    display: flex;
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    .header__logo{
+      @include lg{
+        width: 50px;
+        height: 60px;
+        margin: 14px 0;
+      }
+    }
+
+  }
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+
+  &__logo{
+    width: 40px;
+    height: auto;
+    position: relative;
+    margin: 14px 0;
+
+    @include lg{
+      width: 90px;
+      height: 100px;
+      margin: 36px 0;
+    }
+  }
+
+  &__logo-image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__menu{
+    display: none;
+    align-items: center;
+    padding-left: 0;
+
+    @include lg{
+      display: flex;
+    }
+
+    &_active{
+      display: flex;
+      position: absolute;
+      top: 50px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 50px);
+      width: 100%;
+      background: rgba(0,0,0,.5);
+      left: 0;
+    }
+  }
+
+  &__item{
+    list-style-type: none;
+
+    @include lg{
+      margin-right: 40px;
+    }
+
+    a{
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      line-height: 3.75;
+      text-align: center;
+      transition: .3s all;
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    &:hover{
+      a{
+        transition: .3s all;
+        text-decoration: underline;
+        opacity: .7;
+      }
+    }
+  }
+
+  &__humburger{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+
+    @include lg{
+      display: none;
+    }
+
+    span{
+      width: 40px;
+      height: 2px;
+      background: #ffffff;
+      transition: .3s all;
+    }
+
+    span:nth-child(2){
+      margin-top: 8px;
+    }
+
+    &_active{
+      span{
+        transform: rotate(45deg);
+        transition: .3s all;
+      }
+
+      span:nth-child(2){
+        transform: rotate(-45deg);
+        margin-top: -2px;
+      }
+    }
+  }
+
+
+}
